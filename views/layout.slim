@@ -1,0 +1,21 @@
+doctype html
+html[lang="en"]
+  head
+    meta[charset="utf-8"]
+    meta[name="viewport" content="width=device-width, initial-scale=1"]
+    meta[name="author" content="Ryan Collins"]
+    link[rel="icon" href="assets/favicon.ico"]
+    title
+      | The Ryans Den
+    link[href="css/bootstrap.min.css" rel="stylesheet"]
+    link[href="css/den.css" rel="stylesheet"]
+    script[src="js/den.js"]
+    javascript:
+      window.onload = run(0);
+  body
+    .container-fluid
+      .header.clearfix
+        h1#title
+          marquee
+            | Welcome to the Ryans Den
+	== yield
