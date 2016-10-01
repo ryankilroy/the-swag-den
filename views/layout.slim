@@ -17,5 +17,5 @@ html[lang="en"]
       .header.clearfix
         h1#title
           marquee[behavior="alternate"]
-            | Welcome to the Ryans Den
+            = @header ? @header : $header
 	== yield

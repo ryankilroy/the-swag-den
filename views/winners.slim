@@ -1,0 +1,11 @@
+h2.winner#winner
+	| 1. #{@winner}
+.jumbotron
+	.row
+		.col-xs-4
+		.col-xs-4
+			ol.winner[start="2"]
+				- @winners.each do |winner|
+					li.winner
+						| #{winner}
+		.col-xs-4

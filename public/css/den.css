@@ -17,6 +17,19 @@ h2 {
 	color: cyan;
 }
 
+#winner {
+	font-size: 12vw;
+	-webkit-text-stroke-width: 0.20vw;
+	-webkit-text-stroke-color: magenta;
+}
+
+.winner {
+	color: white;
+	font-size: 4vw;
+	text-align: center;
+	width: 100%;
+}
+
 #background {
 	width: 100vw;
 	height: 100vh;

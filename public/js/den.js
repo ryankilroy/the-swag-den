@@ -35,9 +35,11 @@ function countdown() {
 
 	setTimeout(function(){
 
-		var endtime = 'October 01 2016 20:30:00 GMT-0400';
+		var endtime = 'October 01 2016 21:00:00 GMT-0400';
 		var time = getTimeRemaining(endtime);
-
+		if (time.days < 1 && time.hours < 1 && time.minutes < 1 && time.seconds < 1) {
+			window.location.href = "/countdone";
+		}
 		var hours = document.getElementsByClassName("hours")[0];
 		var minutes = document.getElementsByClassName("minutes")[0];
 		var seconds = document.getElementsByClassName("seconds")[0];
