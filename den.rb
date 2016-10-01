@@ -25,6 +25,14 @@ class TheRyansDen < Sinatra::Base
 					redirect to('/rules')
 				end
 		end
+		
+		get '/checkwinner' do
+			if File.size?(File.join('public','/assets/winners'))
+				return "WINNER"
+			else 
+				return "nothing"
+			end
+		end
 
 		get '/riddles/:num' do
 				@num = params[:num]
@@ -94,6 +102,7 @@ class TheRyansDen < Sinatra::Base
 
 		get '/reset' do
 			File.truncate(File.join('public', 'assets/winners'), 0)
+			redirect to('/riddles')
 		end
 
 		get '/:page' do

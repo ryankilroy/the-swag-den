@@ -20,7 +20,7 @@ h2 {
 #winner {
 	font-size: 12vw;
 	-webkit-text-stroke-width: 0.20vw;
-	-webkit-text-stroke-color: magenta;
+	-webkit-text-stroke-color: red;
 }
 
 .winner {

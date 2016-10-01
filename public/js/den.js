@@ -71,6 +71,62 @@ function countdown() {
 	}, 1000);
 }
 
+function rules() {
+	setTimeout(function() {
+		var won = checkWinner();
+		if (won == 'WINNER') {
+			window.location.href = "/winners";
+		}	
+		rules();
+	}, 5000);
+}
+
+function checkWinner() {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", '/checkwinner', false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+function winnerDance(n) {
+	var winner = document.getElementById("winner");
+	setTimeout(function(){
+		if (winner) {
+			var rgb = rainbow(n);
+			n++;
+			if (n > 1530) {
+				n = 0;
+			}
+			winner.style.webkitTextStrokeColor = "rgb(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + ")";
+		}
+		winnerDance(n);
+	}, 1);
+}
+
+function rainbow(n) {
+	var rgb = [0,0,0];
+	if (n >= 0 && n <= 255){
+		rgb[0] = 255;
+		rgb[1] = n;
+	} else if (n > 255 && n <= 510) {
+		rgb[0] = 510 - n;
+		rgb[1] = 255;
+	} else if (n > 510 && n <= 765) {
+		rgb[1] = 255;
+		rgb[2] = n - 510;
+	} else if (n > 765 && n <= 1020) {
+		rgb[1] = 1020 - n;
+		rgb[2] = 255;
+	} else if (n > 1020 && n <= 1275) {
+		rgb[0] = n - 1020;
+		rgb[2] = 255;
+	} else if (n > 1275 && n <= 1530) {
+		rgb[0] = 255;
+		rgb[2] = 1530 - n;
+	}
+	return rgb;
+}
+
 function getTimeRemaining(endtime){
   var t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = Math.floor( (t/1000) % 60 );
