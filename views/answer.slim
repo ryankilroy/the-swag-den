@@ -1,0 +1,49 @@
+.jumbotron
+  h2
+    | Congratulations!!
+  p
+    | Just fill out this form to prove you solved the riddles!
+  form action="/answer" method="POST"
+    .row
+      .col-xs-4
+        p
+          | Your Name:
+      .col-xs-8
+        input type="text" name="name"
+    .row
+      .col-xs-4
+        p
+          | Answer#1:
+      .col-xs-8
+        input type="text" name="riddle1"
+    .row
+      .col-xs-4
+        p
+          | Answer#2:
+      .col-xs-8
+        input type="text" name="riddle2"
+    .row
+      .col-xs-4
+        p
+          | Answer#3:
+      .col-xs-8
+        input type="text" name="riddle3"
+    .row
+      .col-xs-4
+        p
+          | Answer#4:
+      .col-xs-8
+        input type="text" name="riddle4"
+    .row
+      .col-xs-4
+        p
+          | Answer#5:
+      .col-xs-8
+        input type="text" name="riddle5"
+    .row
+      .col-xs-4
+        p
+          | Answer#6:
+      .col-xs-8
+        input type="text" name="riddle6"
+    input.button type="submit" value="Submit!"

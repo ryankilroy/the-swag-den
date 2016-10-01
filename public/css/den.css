@@ -2,14 +2,19 @@ body {
  	background: url(../images/bg.jpg);
  	background-size: cover;
  	background-repeat: no-repeat;
+	font-family: "Comic Sans MS";
 }
 
 h1 {
 	font-family: cursive;
-	font-size: 12vw;
+	font-size: 10vw;
 	color: orange;
-	-webkit-text-stroke-width: 0.25vw;
+	-webkit-text-stroke-width: 0.20vw;
 	-webkit-text-stroke-color: rgba(0,0,0,1);
+}
+
+h2 {
+	color: cyan;
 }
 
 #background {
@@ -17,17 +22,51 @@ h1 {
 	height: 100vh;
 }
 
+a.back {
+	font-size: 5vw;
+}
+
+a.mobilink {
+	font-size: 9vw;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+p {
+	color: white;
+}
+
 p.clock {
 	line-height: 90vh;
 	font-size: 10vw;
-	color: white;
 	text-align: center;
 	-webkit-text-stroke-width: 0.5vw;
 	-webkit-text-stroke-color: rgba(0,140,140,1);
 }
 
+p.riddle {
+	font-size: 20pt;
+	-webkit-text-stroke-width: 1pt;
+	-webkit-text-stroke-color: green;
+}
+
 .container-fluid {
  	padding: 0px;
+}
+
+.jumbotron {
+	background: url("../images/flames.gif");
+}
+
+li {
+	color: white;
+}
+
+img.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .blink {

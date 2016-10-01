@@ -7,15 +7,15 @@ html[lang="en"]
     link[rel="icon" href="assets/favicon.ico"]
     title
       | The Ryans Den
-    link[href="css/bootstrap.min.css" rel="stylesheet"]
-    link[href="css/den.css" rel="stylesheet"]
-    script[src="js/den.js"]
+    link[href="/css/bootstrap.min.css" rel="stylesheet"]
+    link[href="/css/den.css" rel="stylesheet"]
+    script[src="/js/den.js"]
     javascript:
       window.onload = run(0);
   body
     .container-fluid
       .header.clearfix
         h1#title
-          marquee
+          marquee[behavior="alternate"]
             | Welcome to the Ryans Den
 	== yield

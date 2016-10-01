@@ -42,7 +42,7 @@ function countdown() {
 		var minutes = document.getElementsByClassName("minutes")[0];
 		var seconds = document.getElementsByClassName("seconds")[0];
 
-		if (time.hours < 1 && hours.className.indexOf("blink") == -1){
+		if (time.hours + time.days*24 < 1 && hours.className.indexOf("blink") == -1){
 			hours.className += " blink";
 			minutes.className += " blink";
 			seconds.className += " blink";

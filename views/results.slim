@@ -1,0 +1,16 @@
+.jumbotron
+  h2
+    | Your Results
+    ol
+      li
+        = @corrects[0] ? 'Correct.' : 'Wrong.'
+      li
+        = @corrects[1] ? 'Correct.' : 'Wrong.'
+      li
+        = @corrects[2] ? 'Correct.' : 'Wrong.'
+      li
+        = @corrects[3] ? 'Correct.' : 'Wrong.'
+      li
+        = @corrects[4] ? 'Correct.' : 'Wrong.'
+      li
+        = @corrects[5] ? 'Correct.' : 'Wrong.'

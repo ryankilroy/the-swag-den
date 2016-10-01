@@ -1,0 +1,13 @@
+a.back[href="/riddles"]
+  | <-- Back
+.jumbotron
+  h2
+    | RIDDLE #
+    = @num
+
+  p.riddle
+    = @riddle
+
+  form action="/riddles/#{@num}" method="POST"
+    input type="text" name="guess"
+    input.button type="submit" value="Guess!"
